@@ -72,27 +72,27 @@ if (@($wqlObjectSet).Count -gt 0) {
 
         $NewADComputerInfoDescription = "$($me.DisplayName) · $($model.Trim()) · $($objWMIClass.IdentifyingNumber.Trim()) [$($totalMemory)G/$($totalDiskSpace)G]"
 
-        Write-Host "              Current User: ......  " -NoNewline -ForegroundColor Gray
+        Write-Host "Current User: ......  " -NoNewline -ForegroundColor Gray
         Write-Host $($me.DisplayName) -ForegroundColor White
-        Write-Host "              Username: ..........  " -NoNewline -ForegroundColor Gray
+        Write-Host "Username: ..........  " -NoNewline -ForegroundColor Gray
         Write-Host $env:USERDOMAIN\$env:USERNAME -ForegroundColor White
-        Write-Host "              Computer Name: .....  " -NoNewline -ForegroundColor Gray
+        Write-Host "Computer Name: .....  " -NoNewline -ForegroundColor Gray
         Write-Host $env:COMPUTERNAME"."$env:USERDNSDOMAIN -ForegroundColor White
-        Write-Host "              Logon Server: ......  " -NoNewline -ForegroundColor Gray
+        Write-Host "Logon Server: ......  " -NoNewline -ForegroundColor Gray
         Write-Host $env:LOGONSERVER -ForegroundColor White
-        Write-Host "              PC Vendor: .........  " -NoNewline -ForegroundColor Gray
+        Write-Host "PC Vendor: .........  " -NoNewline -ForegroundColor Gray
         Write-Host $objWMIClass.Vendor -ForegroundColor White
-        Write-Host "              PC Model: ..........  " -NoNewline -ForegroundColor Gray
+        Write-Host "PC Model: ..........  " -NoNewline -ForegroundColor Gray
         Write-Host $model.Trim() -ForegroundColor White
-        Write-Host "              PC Serial Number: ..  " -NoNewline -ForegroundColor Gray
+        Write-Host "PC Serial Number: ..  " -NoNewline -ForegroundColor Gray
         Write-Host $objWMIClass.IdentifyingNumber.Trim() -ForegroundColor White
-        Write-Host "              Total Memory: ......  " -NoNewline -ForegroundColor Gray
+        Write-Host "Total Memory: ......  " -NoNewline -ForegroundColor Gray
         Write-Host "$($totalMemory) GB" -ForegroundColor White
-        Write-Host "              Total Disk Space: ..  " -NoNewline -ForegroundColor Gray
+        Write-Host "Total Disk Space: ..  " -NoNewline -ForegroundColor Gray
         Write-Host "$($totalDiskSpace) GB" -ForegroundColor White
-        Write-Host "              Description: .......  " -NoNewline -ForegroundColor Gray
+        Write-Host "Description: .......  " -NoNewline -ForegroundColor Gray
         Write-Host $NewADComputerInfoDescription
-        Write-Host "              UUID: ..............  " -NoNewline -ForegroundColor Gray
+        Write-Host "UUID: ..............  " -NoNewline -ForegroundColor Gray
         Write-Host $objWMIClass.UUID -ForegroundColor White
         Write-Host "`n" -ForegroundColor White
 
